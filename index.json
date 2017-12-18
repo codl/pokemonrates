@@ -5,28 +5,40 @@
             "#pokemon# good",
             "#pokemon# good",
             "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
             "#pokemon# is good",
             "#pokemon#! Good",
             "#pokemon#... Good",
             "#pokemon#? Good",
             "#pokemon#: Good",
-            "#pokemon# is trying #possessive# best. Admirable"
+            "#pokemon# is trying #their# best",
+            "I like #pokemon#, #theyre# good",
+            "#pokemon#? #theyre.capitalize# good",
+            "It is my expect opinion that #pokemon# is good",
+            "Studies show that #pokemon# is good",
+            "Top Pokémon professors agree: #pokemon# is good",
+            "When it comes to #pokemon#, it seems obvious that #they are# good",
+            "Ah, #pokemon#! Good"
         ],
-        "possessive": [
+        "their": [
             "their",
             "its",
             "his",
             "her",
             "eir"
+        ],
+        "theyre": [
+            "they're",
+            "it's",
+            "he's",
+            "she's",
+            "e's"
+        ],
+        "they are": [
+            "they are",
+            "it is",
+            "he is",
+            "she is",
+            "e is"
         ],
         "pokemon": [
             "Bulbasaur",
