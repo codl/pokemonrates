@@ -19,8 +19,15 @@
             "#pokemon#... Good",
             "#pokemon#? Good",
             "#pokemon#: Good",
-            "#pokemon# is trying its best. Admirable"
-    ],
+            "#pokemon# is trying #possessive# best. Admirable"
+        ],
+        "possessive": [
+            "their",
+            "its",
+            "his",
+            "her",
+            "eir"
+        ],
         "pokemon": [
             "Bulbasaur",
             "Ivysaur",
