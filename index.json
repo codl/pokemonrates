@@ -31,21 +31,24 @@
         "its",
         "his",
         "her",
-        "eir"
+        "eir",
+        "zirs"
     ],
     "theyre": [
         "they're",
         "it's",
         "he's",
         "she's",
-        "e's"
+        "e's",
+        "ze's"
     ],
     "they are": [
         "they are",
         "it is",
         "he is",
         "she is",
-        "e is"
+        "e is",
+        "ze is"
     ],
     "pokemon": [
         "Bulbasaur",
