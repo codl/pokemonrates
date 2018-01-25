@@ -73,11 +73,16 @@ class Bot(mastodon.StreamListener):
             reply = self.on_mention(status)
             if reply:
                 self.logger.info('Replying: {}'.format(reply))
+
                 mentions = set(map(lambda mention: mention['acct'], status['mentions']))
                 mentions.add(status['account']['acct'])
                 mentions.remove(self.me['acct'])
                 mentions = reduce(lambda a, b: '{}@{} '.format(a, b), mentions, "")
-                self.mastodon.status_post(mentions + reply, in_reply_to_id=status['id'])
+
+                visibility = status.visibility
+
+                self.mastodon.status_post(mentions + reply, in_reply_to_id=status['id'],
+                        visibility=visibility)
 
     def on_update(self, update):
         pass
