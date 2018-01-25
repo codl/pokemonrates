@@ -50,7 +50,7 @@ class Bot(mastodon.StreamListener):
         return False
 
     def on_mention(self, status):
-        words = status['content_clean'].split()
+        words = re.findall('\w+', status['content_clean'])
         random.shuffle(words)
         for word in words:
             pokémon = self.to_pokémon(word)
