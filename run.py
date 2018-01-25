@@ -12,12 +12,10 @@ import logging
 class Bot(mastodon.StreamListener):
     def __init__(self):
         self.logger = logging.getLogger('bot.pokemonrates')
-        self.logger.info('hey')
         yaml = ruamel.yaml.YAML()
 
         with open('pokemon.txt') as f:
             self.pokémon = list(map(lambda p: p.strip(), f.readlines()))
-            print(self.pokémon)
 
         with open('grammar.yml') as f:
             self.grammar = yaml.load(f)
@@ -27,14 +25,14 @@ class Bot(mastodon.StreamListener):
 
         with open('bot.yml') as f:
             self.config = yaml.load(f)
+            if 'last_timer' not in self.config:
+                self.config['last_timer'] = time.time()
 
         self.mastodon = mastodon.Mastodon(
                 api_base_url=self.config['instance'],
                 client_id=self.config['client_key'],
                 client_secret=self.config['client_secret'],
                 access_token=self.config['access_token'])
-
-        self.me = self.mastodon.account_verify_credentials()
 
     def save(self):
         yaml = ruamel.yaml.YAML()
@@ -81,22 +79,39 @@ class Bot(mastodon.StreamListener):
                 mentions = reduce(lambda a, b: '{}@{} '.format(a, b), mentions, "")
                 self.mastodon.status_post(mentions + reply, in_reply_to_id=status['id'])
 
+    def on_update(self, update):
+        pass
+
     def run(self):
-        stream = self.mastodon.stream_user(self, async=True)
-        self.logger.info('Connected.')
+        self.me = self.mastodon.account_verify_credentials()
+
+        stream = None
         while True:
-            try:
+            if stream is None or not stream.is_alive():
+                if stream is not None:
+                    self.logger.warning('Stream lost, reconnecting...')
+                stream = self.mastodon.stream_user(self, async=True)
+                self.logger.info('Connected.')
+            if time.time() > self.config['last_timer'] + 60*60:
                 self.logger.info('Sending hourly status.')
                 self.on_timer()
-                time.sleep(60*60)
-            except KeyboardInterrupt:
-                self.logger.info('Quitting...')
-                stream.close()
-                return
+                self.config['last_timer'] = time.time()
+                self.save()
+            time.sleep(15)
 
 
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
-    bot = Bot()
-    bot.run()
+    logger = logging.getLogger('bot')
+    stopping = False
+    while not stopping:
+        try:
+            bot = Bot()
+            bot.run()
+        except KeyboardInterrupt:
+            # why doesn't this ever run?
+            logger.info('Quitting...')
+            stopping = True
+        except Exception as e:
+            bot.logger.exception('Crashed. Restarting...')
