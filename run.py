@@ -60,7 +60,12 @@ class Bot(mastodon.StreamListener):
                         '#[pokemon:{}]origin#'.format(pokémon))
                 self.tracery.clear_state()
                 return reply
-        return self.tracery.flatten('#origin#')
+        ctx = self.mastodon.status_context(status)
+        if not any(map(lambda status: status['account']['id'] == self.me['id'], ctx['ancestors'])):
+            # if we're not already in the thread
+            return self.tracery.flatten('#origin#')
+        else:
+            self.logger.info("We're already in this thread, not replying.")
 
     def on_notification(self, notification):
         if notification['type'] == 'mention':
