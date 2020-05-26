@@ -27,7 +27,9 @@ class Bot(mastodon.StreamListener):
         with open('bot.yml') as f:
             self.config = yaml.load(f)
             if 'last_timer' not in self.config:
-                self.config['last_timer'] = time.time()
+                self.config['last_timer'] = 0
+            if 'last_public_timer' not in self.config:
+                self.config['last_public_timer'] = time.time()
 
         s = requests.Session()
         s.headers.update({"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"})
@@ -44,9 +46,9 @@ class Bot(mastodon.StreamListener):
         with open('bot.yml', 'w') as f:
             yaml.dump(self.config, f)
 
-    def on_timer(self):
+    def on_timer(self, is_public=False):
         self.mastodon.status_post(
-                self.tracery.flatten('#origin#'), visibility='unlisted')
+                self.tracery.flatten('#origin#'), visibility='public' if is_public else 'unlisted')
 
     def to_pokémon(self, word):
         for pokémon in self.pokémon:
@@ -107,10 +109,13 @@ class Bot(mastodon.StreamListener):
                     self.logger.warning('Stream lost, reconnecting...')
                 stream = self.mastodon.stream_user(self, run_async=True)
                 self.logger.info('Connected.')
-            if time.time() > self.config['last_timer'] + 60*60:
+            if time.time() > self.config['last_timer'] + 60*61:
+                is_public = time.time() > self.config['last_public_timer'] + 60*60*24
                 self.logger.info('Sending hourly status.')
-                self.on_timer()
+                self.on_timer(is_public)
                 self.config['last_timer'] = time.time()
+                if is_public:
+                    self.config['last_public_timer'] = time.time()
                 self.save()
             time.sleep(15)
 
