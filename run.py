@@ -100,7 +100,7 @@ class Bot(mastodon.StreamListener):
             if stream is None or not stream.is_alive():
                 if stream is not None:
                     self.logger.warning('Stream lost, reconnecting...')
-                stream = self.mastodon.stream_user(self, async=True)
+                stream = self.mastodon.stream_user(self, run_async=True)
                 self.logger.info('Connected.')
             if time.time() > self.config['last_timer'] + 60*60:
                 self.logger.info('Sending hourly status.')
