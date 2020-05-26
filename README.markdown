@@ -1,6 +1,6 @@
 # pokemon rates
 
-is a mastodon bot that rates pokémon. it can be found at [pokemonrates@botsin.space](https://botsin.space/pokemonrates)
+is a mastodon bot that rates pokémon. it can be found at [pokemonrates@botsin.space](https://botsin.space/@pokemonrates)
 
 ## running
 
