@@ -32,10 +32,14 @@ for table in soup.find_all("table"):
             species_names.append(name)
             known.add(name)
 
+if len(sys.argv) == 2 and sys.argv[1] == "-":
+    f = sys.stdout
+else:
+    f = open("pokemon.txt", "w")
 
-with open("pokemon.txt", "w") as f:
-    f.write("\n".join(species_names))
+f.write("\n".join(species_names))
 print(
-    "Written {} species to pokemon.txt\nTa-ta for now!".format(len(species_names)),
+    "Written {} species\nTa-ta for now!".format(len(species_names)),
     file=sys.stderr,
 )
+f.close()

@@ -1,17 +1,21 @@
-from python:3
+FROM python:3 as scrape
 
-workdir /app
+WORKDIR /app
 
-copy requirements.txt .
-run pip install --no-cache-dir -r requirements.txt
+COPY requirements-dev.txt .
+RUN pip install --no-cache-dir -r requirements-dev.txt
 
-copy grammar.yml run.py pokemon.txt ./
+COPY scrape_pokemon.py ./
 
-#ARG INSTANCE
-#ARG CLIENT_KEY
-#ARG CLIENT_SECRET
-#ARG ACCESS_TOKEN
-#COPY bot.yml.dockertemplate /app/
-#RUN envsubst < bot.yml.dockertemplate > bot.yml && rm bot.yml.dockertemplate
+CMD ["python", "scrape_pokemon.py", "-"]
+
+FROM python:3 as run
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY grammar.yml run.py pokemon.txt ./
 
 CMD ["python", "run.py"]
