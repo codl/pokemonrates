@@ -7,6 +7,7 @@ import random
 import time
 from functools import reduce
 import logging
+import requests
 
 
 class Bot(mastodon.StreamListener):
@@ -28,11 +29,15 @@ class Bot(mastodon.StreamListener):
             if 'last_timer' not in self.config:
                 self.config['last_timer'] = time.time()
 
+        s = requests.Session()
+        s.headers.update({"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"})
         self.mastodon = mastodon.Mastodon(
                 api_base_url=self.config['instance'],
                 client_id=self.config['client_key'],
                 client_secret=self.config['client_secret'],
-                access_token=self.config['access_token'])
+                access_token=self.config['access_token'],
+                session=s,
+                )
 
     def save(self):
         yaml = ruamel.yaml.YAML()
