@@ -8,7 +8,7 @@ these instructions are probably not for you
 
 ### natively
 
-make sure python 3.5ish or higher is installed, and also pipenv
+make sure python 3.6ish or higher is installed, and also pipenv
 
 ```
 pipenv sync

@@ -1,4 +1,5 @@
-FROM python:3 as scrape
+ARG python_version=3
+FROM python:$python_version as scrape
 
 WORKDIR /app
 
@@ -9,7 +10,7 @@ COPY scrape_pokemon.py ./
 
 CMD ["python", "scrape_pokemon.py", "-"]
 
-FROM python:3 as run
+FROM python:$python_version as run
 
 WORKDIR /app
 
