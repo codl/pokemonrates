@@ -1,0 +1,27 @@
+-i https://pypi.python.org/simple
+beautifulsoup4==4.9.1
+blurhash==1.1.4
+certifi==2020.4.5.1
+chardet==3.0.4
+decorator==4.4.2
+h11==0.9.0
+h2==3.2.0
+hpack==3.0.0
+hstspreload==2020.5.19
+httpcore==0.9.0
+httpx==0.13.1
+hyperframe==5.2.0
+idna==2.9
+mastodon.py==1.5.1
+python-dateutil==2.8.1
+python-magic==0.4.18
+pytz==2020.1
+requests==2.23.0
+rfc3986==1.4.0
+ruamel.yaml.clib==0.2.0 ; platform_python_implementation == 'CPython' and python_version < '3.9'
+ruamel.yaml==0.16.10
+six==1.15.0
+sniffio==1.1.0
+soupsieve==2.0.1
+tracery==0.1.1
+urllib3==1.25.9
