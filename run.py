@@ -117,7 +117,7 @@ class Bot(mastodon.StreamListener):
                 if is_public:
                     self.config['last_public_timer'] = time.time()
                 self.save()
-            time.sleep(15)
+            time.sleep(6)
 
 
 
