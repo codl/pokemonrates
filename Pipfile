@@ -10,7 +10,8 @@ name = "pypi"
 "mastodon.py" = "*"
 "ruamel.yaml" = "*"
 tracery = "*"
-
+httpx = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 
