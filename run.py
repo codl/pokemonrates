@@ -29,7 +29,7 @@ class Bot(mastodon.StreamListener):
             if 'last_timer' not in self.config:
                 self.config['last_timer'] = 0
             if 'last_public_timer' not in self.config:
-                self.config['last_public_timer'] = time.time()
+                self.config['last_public_timer'] = 0
 
         s = requests.Session()
         s.headers.update({"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"})
