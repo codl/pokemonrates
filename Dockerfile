@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements-dev.txt
 
 COPY scrape_pokemon.py ./
 
-CMD ["python", "scrape_pokemon.py", "-"]
+CMD ["python", "scrape_pokemon.py"]
 
 FROM python:$python_version as run
 

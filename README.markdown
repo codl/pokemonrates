@@ -36,7 +36,7 @@ this scrapes names of pokémon from bulbapedia. it's bad but i don't have anythi
 
 ```
 pipenv sync -d
-pipenv run scrape_pokemon.py
+pipenv run scrape_pokemon.py > pokemon.txt
 ```
 
 ### docker
