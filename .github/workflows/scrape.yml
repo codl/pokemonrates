@@ -28,7 +28,7 @@ jobs:
     - run: pip install -r requirements-dev.txt
     - run: python scrape_pokemon.py > pokemon-2.txt
     - id: compare
-      run:  if [[ $(wc -l pokemon.txt) -lt $(wc -l pokemon-2.txt) ]]; then echo "::set-env name=changed::1"
+      run:  if [[ $(wc -l pokemon.txt) -lt $(wc -l pokemon-2.txt) ]]; then echo "::set-env name=changed::1"; fi
     - name: Commit and push
       if: ${{ env.changed == 1 }}
       run: |
