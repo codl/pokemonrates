@@ -26,18 +26,12 @@ jobs:
       with:
         python-version: 3.8
     - run: pip install -r requirements-dev.txt
-    - run: python scrape-pokemon.py > pokemon-2.txt
+    - run: python scrape_pokemon.py > pokemon-2.txt
     - id: compare
       run:  if [[ $(wc -l pokemon.txt) -lt $(wc -l pokemon-2.txt) ]]; then echo "::set-env name=changed::1"
-    - if: ${{ env.changed == 1 }}
+    - name: Commit and push
+      if: ${{ env.changed == 1 }}
       run: |
         mv pokemon-2.txt pokemon.txt
-        git config --local user.email "actions@github.com"
-        git config --local user.name "Actions user"
-        git commit -m "update list of pokémon" -a
-    - name: Push changes
-      if: ${{ env.changed == 1 }}
-      uses: ad-m/github-push-action@master
-      with:
-        branch: scrape
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        git commit -m "update list of pokémon" --author="Actions <actions@github.com>" pokemon.txt
+        git push --force origin master:update-scrape
