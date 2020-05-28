@@ -6,7 +6,7 @@ name: Scrape pokémon list
 # events but only for the master branch
 on:
   schedule:
-    cron: "20 4 * * *"
+    - cron: "20 4 * * *"
   push:
     branches:
       - master
