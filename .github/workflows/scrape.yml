@@ -33,5 +33,7 @@ jobs:
       if: ${{ env.changed == 1 }}
       run: |
         mv pokemon-2.txt pokemon.txt
+        git config user.email "codl@codl.fr"
+        git config user.name "codl"
         git commit -m "update list of pokémon" --author="Actions <actions@github.com>" pokemon.txt
         git push --force origin master:update-scrape
