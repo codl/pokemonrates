@@ -891,4 +891,3 @@ Eternatus
 Kubfu
 Urshifu
 Calyrex
-Zarude
