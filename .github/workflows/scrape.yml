@@ -37,7 +37,7 @@ jobs:
         git commit -m "update list of pokémon" -a
     - name: Push changes
       if: ${{ env.changed == 1 }}
-      uses: ad-m/github-push-action
+      uses: ad-m/github-push-action@master
       with:
         branch: scrape
         github_token: ${{ secrets.GITHUB_TOKEN }}
