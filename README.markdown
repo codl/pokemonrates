@@ -45,3 +45,5 @@ pipenv run scrape_pokemon.py > pokemon.txt
 docker build -t pokemonrates:scrape --target scrape .
 docker run --rm pokemonrates:scrape > pokemon.txt
 ```
+
+note that you'll need to rebuild the bot's main docker image to include the new list of pokémon
