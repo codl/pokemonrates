@@ -43,3 +43,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PULL_REQUEST_BRANCH: "master"
         PULL_REQUEST_FROM_BRANCH: "update-scrape"
+        PULL_REQUEST_ASSIGNEES: "codl"
