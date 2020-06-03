@@ -892,3 +892,5 @@ Kubfu
 Urshifu
 Calyrex
 Zarude
+Regieleki
+Regidrago
