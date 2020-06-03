@@ -44,3 +44,4 @@ jobs:
         PULL_REQUEST_BRANCH: "master"
         PULL_REQUEST_FROM_BRANCH: "update-scrape"
         PULL_REQUEST_ASSIGNEES: "codl"
+        PULL_REQUEST_TITLE: "Update list of pokémon"
