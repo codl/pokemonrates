@@ -38,6 +38,7 @@ jobs:
         git commit -m "Update list of pokémon" --author="Actions <actions@github.com>" pokemon.txt
         git push --force origin master:update-scrape
     - name: pull-request-action
+      if: ${{ env.changed == 1 }}
       uses: vsoch/pull-request-action@1.0.6
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
