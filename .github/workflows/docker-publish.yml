@@ -1,0 +1,31 @@
+name: Docker
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build images
+        run: |
+          docker build . --file Dockerfile --tag pokemonrates
+          docker build . --file Dockerfile --tag scrape --target scrape
+
+      - name: Log into registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+
+      - name: Push images
+        run: |
+          PREFIX=docker.pkg.github.com/${{ github.repository }}
+
+          docker tag pokemonrates $PREFIX/pokemonrates:latest
+          docker push $PREFIX/pokemonrates:latest
+
+          docker tag scrape $PREFIX/scrape:latest
+          docker push $PREFIX/scrape:latest
