@@ -3,7 +3,7 @@ blurhash==1.1.4
 certifi==2020.6.20
 chardet==3.0.4
 decorator==4.4.2
-idna==2.9
+idna==2.10
 mastodon.py==1.5.1
 python-dateutil==2.8.1
 python-magic==0.4.18
@@ -13,4 +13,4 @@ ruamel.yaml.clib==0.2.0 ; platform_python_implementation == 'CPython' and python
 ruamel.yaml==0.16.10
 six==1.15.0
 tracery==0.1.1
-urllib3==1.25.9
+urllib3==1.25.10
