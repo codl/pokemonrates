@@ -890,7 +890,9 @@ Zamazenta
 Eternatus
 Kubfu
 Urshifu
-Calyrex
 Zarude
 Regieleki
 Regidrago
+Glastrier
+Spectrier
+Calyrex
