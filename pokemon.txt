@@ -896,3 +896,5 @@ Regidrago
 Glastrier
 Spectrier
 Calyrex
+Basculegion
+Wyrdeer
