@@ -896,6 +896,10 @@ Regidrago
 Glastrier
 Spectrier
 Calyrex
-Basculegion
 Wyrdeer
 Kleavor
+Ursaluna
+Basculegion
+Sneasler
+Overqwil
+Enamorus
