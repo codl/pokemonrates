@@ -903,3 +903,6 @@ Basculegion
 Sneasler
 Overqwil
 Enamorus
+Sprigatito
+Fuecoco
+Quaxly
