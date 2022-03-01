@@ -6,12 +6,9 @@ import sys
 URL = "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
 HEADER = re.compile("\s*Pokémon\s*")
 
-with requests.session(
-    headers={"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"}
-) as client:
-    resp = client.get(URL)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+resp = requests.get(URL, headers={"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"})
+resp.raise_for_status()
+soup = BeautifulSoup(resp.text, "html.parser")
 
 species_names = []
 known = set()
