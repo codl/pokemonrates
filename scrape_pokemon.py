@@ -1,4 +1,4 @@
-import httpx
+import requests
 from bs4 import BeautifulSoup
 import re
 import sys
@@ -6,7 +6,7 @@ import sys
 URL = "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
 HEADER = re.compile("\s*Pokémon\s*")
 
-with httpx.Client(
+with requests.session(
     headers={"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"}
 ) as client:
     resp = client.get(URL)
