@@ -68,9 +68,9 @@
     ],
     "rareexperiment": [
         "(holds a petri dish to the light, then drinks from it)",
-        "(inspects the contents of a flask, then takes a swig from it)"
+        "(inspects the contents of a flask, then takes a swig from it)",
         "(mixes some liquids, then takes a swig from the results)"
-    ]
+    ],
     "machineresult": [
         "a light turns #green#",
         "its printer comes to life",
@@ -95,7 +95,7 @@
     "hum": [
         "hum",
         "whirr"
-    ]
+    ],
     "green": [
         "green",
         "amber",
