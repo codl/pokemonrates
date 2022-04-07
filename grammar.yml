@@ -1,28 +1,111 @@
 {
     "origin": [
+            "#theclassics#",
+            "#theclassics#",
+            "#wordy#",
+            "#wordy#",
+            "#doesathing#",
+            "#doesathing#",
+            "#wildcard#"
+    ],
+    "theclassics": [
             "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# good",
-            "#pokemon# is good",
+            "#pokemon# #is?#good",
             "#pokemon#! Good",
             "#pokemon#... Good",
             "#pokemon#? Good",
             "#pokemon#: Good",
+            "#pokemon#? #theyre.capitalize# good",
+            "#pokemon#? #they are.capitalize# good",
+            "Ah, #pokemon#! Good",
+            "Oh, #pokemon#? Good"
+    ],
+    "wordy": [
+            "Top Pokémon professors agree: #pokemon# #is?#good",
+            "It is my expert appraisal that #pokemon# #is?#good",
+            "Studies show that #pokemon# #is?#good",
+            "My word, #pokemon# #is?#good",
+            "Good grief, #pokemon# #is?#good",
+            "Oh, #pokemon#? I'm writing a paper about how good #they are#.",
+            "Oh, #pokemon#? I just read a paper about how good #they are#.",
+            "Just got the lab results back, they say #pokemon# #is?#good.",
+            "I've been interviewed about #pokemon# for an upcoming documentary, you know. I said that #they are# good.",
+            "As an expert on #pokemon#, I can attest that #they are# good."
+    ],
+    "doesathing": [
+            "#maybeinfosource#The data is conclusive: #pokemon# #is?#good",
+            "#maybeinfosource#There is no doubt about it, #pokemon# #is?#good",
+            "#experiment# Mmh. This confirms #pokemon# #is?#good",
+            "#experiment# Aha. This confirms #pokemon# #is?#good",
+            "#experiment# Fascinating. This must mean #pokemon# #is?#good",
+            "#experiment# Oh! #pokemon# #is?#good",
+            "#experiment# Wow! #pokemon# #is?#good",
+            "#experiment# I knew it! #pokemon# #is?#good!",
+            "#experiment# I was right! #pokemon# #is?#good!",
+            "#experiment# Yes! #pokemon# #is?#good! What a breakthrough!"
+    ],
+    "wildcard": [
             "#pokemon# is trying #their# best",
             "I like #pokemon#",
-            "#pokemon#? #theyre.capitalize# good",
-            "It is my expert appraisal that #pokemon# is good",
-            "Studies show that #pokemon# is good",
-            "Top Pokémon professors agree: #pokemon# is good",
-            "Ah, #pokemon#! Good",
-            "#infosource# #pokemon# is mathematically proven to be good",
-            "#infosource# The pattern is clear: #pokemon# is good",
-            "#infosource# The data is conclusive: #pokemon# is good",
-            "#infosource# This indicates that #pokemon# is good",
-            "My assessment of #pokemon# is thus: Good",
+            "My peers are all talking about #pokemon#",
+            "#pokemon# has the scientific community in an uproar",
+            "For a creature that defies all scientific understanding, #pokemon# sure is friendly and pleasant to be around",
+            "Recent research recommends being nice to #pokemon#",
+            "I dream about #pokemon# sometimes",
             "#pokemon# 💯",
+            "Look, you get the idea. Pokémon good, and #pokemon# is one of them."
+    ],
+    "experiment": [
+        "(peers into a microscope)",
+        "(mixes some colored liquids. the result #substanceresult#)",
+        "(inspecting the contents of a flask)",
+        "(dips a strip of paper into a substance and examines it)",
+        "(stares very intelligently at a blackboard covered with equations)",
+        "(holds a petri dish to the light)",
+        "(flips a switch, causing a machine to #hum#)\n\n(#machineresult#)",
+        "(pours #green# liquid down a windy tube. when it finally comes out the other end, the substance #substanceresult#)",
+        "#rareexperiment#"
+    ],
+    "rareexperiment": [
+        "(holds a petri dish to the light, then drinks from it)",
+        "(inspects the contents of a flask, then takes a swig from it)"
+        "(mixes some liquids, then takes a swig from the results)"
+    ]
+    "machineresult": [
+        "a light turns #green#",
+        "its printer comes to life",
+        "a horn blares",
+        "the machine eventually stops"
+    ],
+    "substanceresult": [
+        "thickens",
+        "becomes clear",
+        "produces bubbles",
+        "starts glowing",
+        "disappears with #a pop#",
+        "produces a flame",
+        "moves on its own",
+        "seems to be weightless",
+        "burns right through its container"
+    ],
+    "a pop": [
+        "a pop",
+        "a bright flash"
+    ],
+    "hum": [
+        "hum",
+        "whirr"
+    ]
+    "green": [
+        "green",
+        "amber",
+        "blue",
+        "white",
+        "red"
+    ],
+    "maybeinfosource": [
+        "",
+        "#infosource#"
     ],
     "infosource": [
         "(examining a printout)",
@@ -51,5 +134,9 @@
         "she is",
         "e is",
         "ze is"
+    ],
+    "is?": [
+        "is ",
+        ""
     ]
 }
