@@ -9,7 +9,7 @@
 # requirements. To emit only development requirements, pass "--dev-only".
 
 -i https://pypi.python.org/simple
-beautifulsoup4==4.10.0
+beautifulsoup4==4.11.1
 blurhash==1.1.4
 certifi==2022.5.18.1
 charset-normalizer==2.0.12; python_version >= '3'
