@@ -1,12 +1,12 @@
 ARG python_version=3.10
 FROM python:$python_version as common
 
-RUN pip install -U --no-cache-dir pip pipenv
+RUN pip install -U --no-cache-dir pip micropipenv
 
 WORKDIR /app
 
 COPY Pipfile Pipfile.lock ./
-RUN pipenv sync --system
+RUN micropipenv install
 
 FROM common as scrape
 
