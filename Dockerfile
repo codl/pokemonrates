@@ -1,21 +1,26 @@
 ARG python_version=3.10
-FROM python:$python_version as scrape
+FROM python:$python_version as common
+
+RUN pip install -U --no-cache-dir pip pipenv
 
 WORKDIR /app
 
-COPY requirements-dev.txt .
-RUN pip install --no-cache-dir -r requirements-dev.txt
+COPY Pipfile Pipfile.lock ./
+RUN pipenv sync --system
+
+FROM common as scrape
+
+RUN pipenv sync -d --system
+
+WORKDIR /app
 
 COPY scrape_pokemon.py ./
 
 CMD ["python", "scrape_pokemon.py"]
 
-FROM python:$python_version as run
+FROM common as run
 
 WORKDIR /app
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
 COPY grammar.yml run.py pokemon.txt ./
 
