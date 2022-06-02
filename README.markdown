@@ -12,7 +12,8 @@ make sure python 3.6ish or higher is installed, and that you're in [a venv](http
 
 ```
 # install dependencies
-pip install pip-tools && pip-sync
+pip install pip-tools
+pip-sync
 
 # configure
 cp bot.example.yml bot.yml
