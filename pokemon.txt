@@ -906,3 +906,8 @@ Enamorus
 Sprigatito
 Fuecoco
 Quaxly
+Pawmi
+Smoliv
+Lechonk
+Koraidon
+Miraidon
