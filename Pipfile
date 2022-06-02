@@ -8,6 +8,6 @@ name = "pypi"
 "requests" = "*"
 "ruamel.yaml" = "*"
 tracery = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
-beautifulsoup4 = "*"

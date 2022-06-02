@@ -10,17 +10,11 @@ RUN pipenv sync --system
 
 FROM common as scrape
 
-RUN pipenv sync -d --system
-
-WORKDIR /app
-
 COPY scrape_pokemon.py ./
 
 CMD ["python", "scrape_pokemon.py"]
 
 FROM common as run
-
-WORKDIR /app
 
 COPY grammar.yml run.py pokemon.txt ./
 

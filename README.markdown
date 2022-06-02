@@ -35,7 +35,7 @@ this scrapes names of pokémon from bulbapedia. it's bad but i don't have anythi
 ### natively
 
 ```
-pipenv sync -d
+pipenv sync
 pipenv run scrape_pokemon.py > pokemon.txt
 ```
 
