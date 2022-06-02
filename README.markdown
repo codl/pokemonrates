@@ -8,21 +8,31 @@ these instructions are probably not for you
 
 ### natively
 
-make sure python 3.6ish or higher is installed, and also pipenv
+make sure python 3.6ish or higher is installed, and that you're in [a venv](https://docs.python.org/3.10/library/venv.html)
 
 ```
-pipenv sync
+# install dependencies
+pip install pip-tools && pip-sync
+
+# configure
 cp bot.example.yml bot.yml
 $EDITOR bot.yml
-pipenv run python run.py
+
+# run
+python run.py
 ```
 
 ### docker
 
 ```
+# build docker image
 docker build -t pokemonrates .
+
+# configure
 cp bot.example.yml bot.yml
 $EDITOR bot.yml
+
+# run
 docker run -d -v /absolute/path/to/bot.yml:/app/bot.yml pokemonrates
 ```
 
@@ -35,8 +45,7 @@ this scrapes names of pokémon from bulbapedia. it's bad but i don't have anythi
 ### natively
 
 ```
-pipenv sync
-pipenv run scrape_pokemon.py > pokemon.txt
+python scrape_pokemon.py > pokemon.txt
 ```
 
 ### docker

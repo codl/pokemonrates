@@ -5,7 +5,7 @@ RUN pip install -U --no-cache-dir pip micropipenv
 
 WORKDIR /app
 
-COPY Pipfile Pipfile.lock ./
+COPY requirements.txt ./
 RUN micropipenv install
 
 FROM common as scrape
