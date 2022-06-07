@@ -5,7 +5,7 @@ import sys
 import time
 
 URL = "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
-HEADER = re.compile("\s*Pokémon\s*")
+HEADER = re.compile(r"\s*Pokémon\s*")
 
 class AttemptsExceeded(Exception):
     pass
