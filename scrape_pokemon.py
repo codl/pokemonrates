@@ -2,12 +2,25 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import sys
+import time
 
 URL = "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
 HEADER = re.compile("\s*Pokémon\s*")
-
-resp = requests.get(URL, headers={"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"})
-resp.raise_for_status()
+resp = None
+attempt = 0
+while not resp:
+    try:
+        resp = requests.get(URL, headers={"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"})
+        resp.raise_for_status()
+    except (requests.HTTPError, requests.ConnectionError) as e:
+        resp = None
+        delay = 10 ** attempt
+        print("Can't reach bulbapedia: {}\nRetrying in {} seconds...".format(
+            e, delay
+            )
+                , file=sys.stderr)
+        time.sleep(delay)
+        attempt += 1
 soup = BeautifulSoup(resp.text, "html.parser")
 
 species_names = []
