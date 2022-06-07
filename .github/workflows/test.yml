@@ -1,0 +1,21 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+        cache: 'pip'
+    - name: Install pip-tools
+      run: pip install -r ci-requirements.txt
+    - run: pip-sync dev-requirements.txt requirements.txt
+    - run: python -m pytest
