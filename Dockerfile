@@ -1,12 +1,12 @@
 ARG python_version=3.10
 FROM python:$python_version as common
 
-RUN pip install -U --no-cache-dir pip micropipenv
+RUN pip install -U --no-cache-dir pip pip-tools
 
 WORKDIR /app
 
 COPY requirements.txt ./
-RUN micropipenv install
+RUN pip-sync
 
 FROM common as scrape
 
