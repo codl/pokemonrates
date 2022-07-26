@@ -4,7 +4,7 @@ import re
 import sys
 import time
 
-URL = "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
+URL = "https://bulbapedia.bulbagarden.net/w/api.php?action=parse&page=List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number&prop=text&format=json"
 HEADER = re.compile(r"\s*Pokémon\s*")
 
 class AttemptsExceeded(Exception):
@@ -34,7 +34,9 @@ def fetch(attempts:int=6, verbose:bool=True) -> requests.Response:
         raise AttemptsExceeded()
 
 def parse_list(resp:requests.Response) -> list[str]:
-    soup = BeautifulSoup(resp.text, "html.parser")
+    d = resp.json()
+    html = d["parse"]["text"]["*"]
+    soup = BeautifulSoup(html, "html.parser")
 
     species_names = []
     known = set()
