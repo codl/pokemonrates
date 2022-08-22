@@ -911,5 +911,6 @@ Smoliv
 Lechonk
 Fidough
 Cetitan
+Cyclizar
 Koraidon
 Miraidon
