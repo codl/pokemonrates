@@ -26,7 +26,7 @@ python run.py
 
 ```
 # build docker image
-docker build -t pokemonrates .
+docker buildx build -t pokemonrates .
 
 # configure
 cp bot.example.yml bot.yml
@@ -51,7 +51,7 @@ python scrape_pokemon.py > pokemon.txt
 ### docker
 
 ```
-docker build -t pokemonrates:scrape --target scrape .
+docker buildx build -t pokemonrates:scrape --target scrape .
 docker run --rm pokemonrates:scrape > pokemon.txt
 ```
 
