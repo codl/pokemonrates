@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  scrape:
+  test:
     runs-on: ubuntu-latest
 
     steps:
