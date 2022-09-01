@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cd $(dirname $0)
-docker build -t pokemonrates . \
-&& docker build -t pokemonrates:scrape --target scrape .
+docker buildx build -t pokemonrates . \
+&& docker buildx build -t pokemonrates:scrape --target scrape .
