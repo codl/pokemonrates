@@ -4,11 +4,17 @@ group "default" {
 
 target "main" {
     dockerfile = "Dockerfile"
-    tags = ["pokemonrates"]
+    tags = ["ghcr.io/codl/pokemonrates"]
 }
 
 target "scrape" {
     inherits = ["main"]
     target = "scrape"
-    tags = ["pokemonrates:scrape"]
+    tags = ["ghcr.io/codl/pokemonrates/scrape"]
+}
+
+target "scrape" {
+    inherits = ["main"]
+    target = "test"
+    tags = ["ghcr.io/codl/pokemonrates/test"]
 }
