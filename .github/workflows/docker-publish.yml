@@ -14,8 +14,8 @@ jobs:
 
       - name: Build images
         run: |
-          docker build . --file Dockerfile --tag pokemonrates
-          docker build . --file Dockerfile --tag scrape --target scrape
+          docker buildx build . --file Dockerfile --tag pokemonrates
+          docker buildx build . --file Dockerfile --tag scrape --target scrape
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
