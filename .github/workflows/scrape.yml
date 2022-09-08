@@ -27,7 +27,7 @@ jobs:
     - run: pip-sync
     - run: python scrape_pokemon.py > pokemon.txt
     - id: compare
-      run: git diff-files --exit-code --quiet pokemon.txt || echo "changed=1" >> $GITHUB_ENV
+      run: git diff --quiet pokemon.txt || echo "changed=1" >> $GITHUB_ENV
     - name: Commit and push
       if: ${{ env.changed == 1 }}
       run: |
