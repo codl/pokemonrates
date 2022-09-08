@@ -4,7 +4,7 @@ group "default" {
 
 target "main" {
     dockerfile = "Dockerfile"
-    tags = ["ghcr.io/codl/pokemonrates"]
+    tags = ["ghcr.io/codl/pokemonrates/pokemonrates"]
 }
 
 target "scrape" {

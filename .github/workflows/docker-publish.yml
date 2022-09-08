@@ -24,8 +24,8 @@ jobs:
         run: |
           PREFIX=docker.pkg.github.com/${{ github.repository }}
 
-          docker tag pokemonrates $PREFIX:latest
-          docker push $PREFIX:latest
+          docker tag pokemonrates $PREFIX/pokemonrates:latest
+          docker push $PREFIX/pokemonrates:latest
 
           docker tag scrape $PREFIX/scrape:latest
           docker push $PREFIX/scrape:latest
