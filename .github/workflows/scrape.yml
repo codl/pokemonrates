@@ -25,13 +25,12 @@ jobs:
     - name: Install pip-tools
       run: pip install -r ci-requirements.txt
     - run: pip-sync
-    - run: python scrape_pokemon.py > pokemon-2.txt
+    - run: python scrape_pokemon.py > pokemon.txt
     - id: compare
-      run:  if [[ $(wc -l < pokemon.txt) -lt $(wc -l < pokemon-2.txt) ]]; then echo "changed=1" >> $GITHUB_ENV; fi
+      run: git diff-files --exit-code --quiet pokemon.txt || echo "changed=1" >> $GITHUB_ENV
     - name: Commit and push
       if: ${{ env.changed == 1 }}
       run: |
-        mv pokemon-2.txt pokemon.txt
         git config user.email "codl@codl.fr"
         git config user.name "codl"
         git commit -m "Update list of pokémon" --author="Actions <actions@github.com>" pokemon.txt
