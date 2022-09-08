@@ -13,7 +13,7 @@ target "scrape" {
     tags = ["ghcr.io/codl/pokemonrates/scrape"]
 }
 
-target "scrape" {
+target "test" {
     inherits = ["main"]
     target = "test"
     tags = ["ghcr.io/codl/pokemonrates/test"]
