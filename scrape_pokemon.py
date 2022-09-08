@@ -61,7 +61,7 @@ def parse_list(resp:requests.Response) -> list[str]:
 
 if __name__ == '__main__':
     species_names = parse_list(fetch())
-    print("\n".join(species_names))
+    print("\n".join(sorted(species_names)))
     print(
         "Written {} species to stdout\nTa-ta for now!".format(len(species_names)),
         file=sys.stderr,
