@@ -16,12 +16,6 @@ COPY scrape_pokemon.py ./
 
 CMD ["python", "scrape_pokemon.py"]
 
-FROM common as run
-
-COPY grammar.yml run.py pokemon.txt ./
-
-CMD ["python", "run.py"]
-
 FROM common as test
 
 COPY dev-requirements.txt ./
@@ -31,3 +25,10 @@ RUN --mount=type=cache,target=/root/.cache/pip/http \
 COPY test_scrape_pokemon.py scrape_pokemon.py ./
 
 CMD ["python", "-m", "pytest"]
+
+FROM common as run
+
+COPY grammar.yml run.py pokemon.txt ./
+
+CMD ["python", "run.py"]
+
