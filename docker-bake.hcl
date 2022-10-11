@@ -4,6 +4,7 @@ group "default" {
 
 target "main" {
     dockerfile = "Dockerfile"
+    target = "run"
     tags = ["ghcr.io/codl/pokemonrates/pokemonrates"]
 }
 
