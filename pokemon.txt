@@ -295,6 +295,7 @@ Gengar
 Geodude
 Gible
 Gigalith
+Gimmighoul
 Girafarig
 Giratina
 Glaceon
