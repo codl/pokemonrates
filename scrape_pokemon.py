@@ -6,6 +6,7 @@ import time
 
 URL = "https://bulbapedia.bulbagarden.net/w/api.php?action=parse&page=List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number&prop=text&format=json"
 HEADER = re.compile(r"\s*Pokémon\s*")
+POKEMON_PAGE_TITLE = re.compile(r".*\s+\(Pokémon\)\s*$")
 
 class AttemptsExceeded(Exception):
     pass
@@ -33,9 +34,12 @@ def fetch(attempts:int=6, verbose:bool=True) -> requests.Response:
     else:
         raise AttemptsExceeded()
 
-def parse_list(resp:requests.Response) -> list[str]:
+def extract_html_from_response(resp: requests.Response) -> str:
     d = resp.json()
     html = d["parse"]["text"]["*"]
+    return html
+
+def parse_list(html: str) -> list[str]:
     soup = BeautifulSoup(html, "html.parser")
 
     species_names = []
@@ -45,13 +49,8 @@ def parse_list(resp:requests.Response) -> list[str]:
         th = table.find("th", string=HEADER)
         if not th:
             continue
-        for i, element in enumerate(th.parent.find_all(True, recursive=False)):
-            if element == th:
-                header_index = i
-        for tr in table.find_all("tr"):
-            if tr == th.parent:
-                continue
-            species = tr.find_all(True, recursive=False)[header_index]
+        species_all = table.find_all("a", title=POKEMON_PAGE_TITLE)
+        for species in species_all:
             name = "".join(species.stripped_strings)
             if name not in known:
                 species_names.append(name)
@@ -60,7 +59,9 @@ def parse_list(resp:requests.Response) -> list[str]:
     return species_names
 
 if __name__ == '__main__':
-    species_names = parse_list(fetch())
+    resp = fetch()
+    html = extract_html_from_response(resp)
+    species_names = parse_list(html)
     print("\n".join(sorted(species_names)))
     print(
         "Written {} species to stdout\nTa-ta for now!".format(len(species_names)),
