@@ -2,12 +2,12 @@ Abomasnow
 Abra
 Absol
 Accelgor
-Aegislash
+AegislashShield Forme
 Aerodactyl
 Aggron
 Aipom
 Alakazam
-Alcremie
+AlcremieVanilla Cream
 Alomomola
 Altaria
 Amaura
@@ -20,7 +20,7 @@ Applin
 Araquanid
 Arbok
 Arcanine
-Arceus
+ArceusArceus
 Archen
 Archeops
 Arctovish
@@ -45,8 +45,8 @@ Banette
 Barbaracle
 Barboach
 Barraskewda
-Basculegion
-Basculin
+BasculegionMale
+BasculinRed-Striped Form
 Bastiodon
 Bayleef
 Beartic
@@ -82,11 +82,12 @@ Bronzong
 Bronzor
 Bruxish
 Budew
+Bug
 Buizel
 Bulbasaur
 Buneary
 Bunnelby
-Burmy
+BurmyPlant Cloak
 Butterfree
 Buzzwole
 Cacnea
@@ -99,7 +100,7 @@ Carnivine
 Carracosta
 Carvanha
 Cascoon
-Castform
+CastformNormal
 Caterpie
 Celebi
 Celesteela
@@ -113,7 +114,7 @@ Charjabug
 Charmander
 Charmeleon
 Chatot
-Cherrim
+CherrimOvercast Form
 Cherubi
 Chesnaught
 Chespin
@@ -168,18 +169,19 @@ Cursola
 Cutiefly
 Cyclizar
 Cyndaquil
+Dark
 Darkrai
-Darmanitan
+DarmanitanStandard Mode
 Dartrix
 Darumaka
 Decidueye
 Dedenne
-Deerling
+DeerlingSpring Form
 Deino
 Delcatty
 Delibird
 Delphox
-Deoxys
+DeoxysNormal Forme
 Dewgong
 Dewott
 Dewpider
@@ -198,6 +200,7 @@ Dracovish
 Dracozolt
 Dragalge
 Dragapult
+Dragon
 Dragonair
 Dragonite
 Drakloak
@@ -227,11 +230,12 @@ Dwebble
 Eelektrik
 Eelektross
 Eevee
-Eiscue
+EiscueIce Face
 Ekans
 Eldegoss
 Electabuzz
 Electivire
+Electric
 Electrike
 Electrode
 Elekid
@@ -239,7 +243,7 @@ Elgyem
 Emboar
 Emolga
 Empoleon
-Enamorus
+EnamorusIncarnate Forme
 Entei
 Escavalier
 Espeon
@@ -249,6 +253,7 @@ Excadrill
 Exeggcute
 Exeggutor
 Exploud
+Fairy
 Falinks
 Farfetch'd
 Farigiraf
@@ -259,17 +264,20 @@ Feraligatr
 Ferroseed
 Ferrothorn
 Fidough
+Fighting
 Finneon
+Fire
 Flaaffy
-Flabébé
+FlabébéRed Flower
 Flapple
 Flareon
 Fletchinder
 Fletchling
 Floatzel
-Floette
-Florges
+FloetteRed Flower
+FlorgesRed Flower
 Flygon
+Flying
 Fomantis
 Foongus
 Forretress
@@ -280,7 +288,7 @@ Frogadier
 Froslass
 Frosmoth
 Fuecoco
-Furfrou
+FurfrouNatural Form
 Furret
 Gabite
 Gallade
@@ -289,15 +297,16 @@ Garbodor
 Garchomp
 Gardevoir
 Gastly
-Gastrodon
-Genesect
+GastrodonWest Sea
+GenesectGenesect
 Gengar
 Geodude
+Ghost
 Gible
 Gigalith
-Gimmighoul
+GimmighoulChest Form
 Girafarig
-Giratina
+GiratinaAltered Forme
 Glaceon
 Glalie
 Glameow
@@ -324,6 +333,7 @@ Gourgeist
 Grafaiai
 Granbull
 Grapploct
+Grass
 Graveler
 Greavard
 Greedent
@@ -332,7 +342,8 @@ Grimer
 Grimmsnarl
 Grookey
 Grotle
-Groudon
+GroudonGroudon
+Ground
 Grovyle
 Growlithe
 Grubbin
@@ -365,7 +376,7 @@ Hitmontop
 Ho-Oh
 Honchkrow
 Honedge
-Hoopa
+HoopaHoopa Confined
 Hoothoot
 Hoppip
 Horsea
@@ -374,11 +385,12 @@ Houndour
 Huntail
 Hydreigon
 Hypno
+Ice
 Igglybuff
 Illumise
 Impidimp
 Incineroar
-Indeedee
+IndeedeeMale
 Infernape
 Inkay
 Inteleon
@@ -399,7 +411,7 @@ Kangaskhan
 Karrablast
 Kartana
 Kecleon
-Keldeo
+KeldeoOrdinary Form
 Kingdra
 Kingler
 Kirlia
@@ -419,11 +431,11 @@ Kricketune
 Krokorok
 Krookodile
 Kubfu
-Kyogre
-Kyurem
+KyogreKyogre
+KyuremKyurem
 Lairon
 Lampent
-Landorus
+LandorusIncarnate Forme
 Lanturn
 Lapras
 Larvesta
@@ -459,7 +471,7 @@ Lurantis
 Luvdisc
 Luxio
 Luxray
-Lycanroc
+LycanrocMidday Form
 Machamp
 Machoke
 Machop
@@ -494,9 +506,9 @@ Medicham
 Meditite
 Meganium
 Melmetal
-Meloetta
+MeloettaAria Forme
 Meltan
-Meowstic
+MeowsticMale
 Meowth
 Mesprit
 Metagross
@@ -511,9 +523,9 @@ Milcery
 Milotic
 Miltank
 Mime Jr.
-Mimikyu
+MimikyuDisguised Form
 Minccino
-Minior
+MiniorMeteor Form
 Minun
 Miraidon
 Misdreavus
@@ -522,7 +534,7 @@ Moltres
 Monferno
 Morelull
 Morgrem
-Morpeko
+MorpekoFull Belly Mode
 Mothim
 Mr. Mime
 Mr. Rime
@@ -551,6 +563,7 @@ Ninjask
 Noctowl
 Noibat
 Noivern
+Normal
 Nosepass
 Numel
 Nuzleaf
@@ -562,7 +575,7 @@ Omastar
 Onix
 Oranguru
 Orbeetle
-Oricorio
+OricorioBaile Style
 Oshawott
 Overqwil
 Pachirisu
@@ -603,6 +616,7 @@ Pinsir
 Piplup
 Plusle
 Poipole
+Poison
 Politoed
 Poliwag
 Poliwhirl
@@ -618,6 +632,7 @@ Primarina
 Primeape
 Prinplup
 Probopass
+Psychic
 Psyduck
 Pumpkaboo
 Pupitar
@@ -655,13 +670,14 @@ Rhyperior
 Ribombee
 Rillaboom
 Riolu
+Rock
 Rockruff
 Roggenrola
 Rolycoly
 Rookidee
 Roselia
 Roserade
-Rotom
+RotomRotom
 Rowlet
 Rufflet
 Runerigus
@@ -676,7 +692,7 @@ Sandshrew
 Sandslash
 Sandygast
 Sawk
-Sawsbuck
+SawsbuckSpring Form
 Scatterbug
 Sceptile
 Scizor
@@ -697,11 +713,11 @@ Servine
 Seviper
 Sewaddle
 Sharpedo
-Shaymin
+ShayminLand Forme
 Shedinja
 Shelgon
 Shellder
-Shellos
+ShellosWest Sea
 Shelmet
 Shieldon
 Shiftry
@@ -713,7 +729,7 @@ Shuppet
 Sigilyph
 Silcoon
 Silicobra
-Silvally
+SilvallyType: Normal
 Simipour
 Simisage
 Simisear
@@ -769,6 +785,7 @@ Staravia
 Starly
 Starmie
 Staryu
+Steel
 Steelix
 Steenee
 Stonjourner
@@ -807,7 +824,7 @@ Tepig
 Terrakion
 Thievul
 Throh
-Thundurus
+ThundurusIncarnate Forme
 Thwackey
 Timburr
 Tirtouga
@@ -817,7 +834,7 @@ Togepi
 Togetic
 Torchic
 Torkoal
-Tornadus
+TornadusIncarnate Forme
 Torracat
 Torterra
 Totodile
@@ -825,7 +842,7 @@ Toucannon
 Toxapex
 Toxel
 Toxicroak
-Toxtricity
+ToxtricityAmped Form
 Tranquill
 Trapinch
 Treecko
@@ -846,10 +863,10 @@ Tyrogue
 Tyrunt
 Umbreon
 Unfezant
-Unown
+UnownOne form
 Ursaluna
 Ursaring
-Urshifu
+UrshifuSingle Strike Style
 Uxie
 Vanillish
 Vanillite
@@ -867,7 +884,7 @@ Vigoroth
 Vikavolt
 Vileplume
 Virizion
-Vivillon
+VivillonPolar Pattern
 Volbeat
 Volcanion
 Volcarona
@@ -879,6 +896,7 @@ Wailord
 Walrein
 Wartortle
 Watchog
+Water
 Weavile
 Weedle
 Weepinbell
@@ -891,17 +909,17 @@ Wigglytuff
 Wiglett
 Wimpod
 Wingull
-Wishiwashi
+WishiwashiSolo Form
 Wobbuffet
 Woobat
 Wooloo
 Wooper
-Wormadam
+WormadamPlant Cloak
 Wurmple
 Wynaut
 Wyrdeer
 Xatu
-Xerneas
+XerneasNeutral Mode
 Xurkitree
 Yamask
 Yamper
@@ -909,8 +927,8 @@ Yanma
 Yanmega
 Yungoos
 Yveltal
-Zacian
-Zamazenta
+ZacianHero of Many Battles
+ZamazentaHero of Many Battles
 Zangoose
 Zapdos
 Zarude
@@ -922,4 +940,4 @@ Zoroark
 Zorua
 Zubat
 Zweilous
-Zygarde
+Zygarde50% Forme
