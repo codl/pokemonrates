@@ -14,15 +14,18 @@ Amaura
 Ambipom
 Amoonguss
 Ampharos
+Annihilape
 Anorith
 Appletun
 Applin
 Araquanid
 Arbok
+Arboliva
 Arcanine
 Arceus
 Archen
 Archeops
+Arctibax
 Arctovish
 Arctozolt
 Ariados
@@ -48,6 +51,7 @@ Barraskewda
 Basculegion
 Basculin
 Bastiodon
+Baxcalibur
 Bayleef
 Beartic
 Beautifly
@@ -71,15 +75,19 @@ Blissey
 Blitzle
 Boldore
 Boltund
+Bombirdier
 Bonsly
 Bouffalant
 Bounsweet
 Braixen
+Brambleghast
+Bramblin
 Braviary
 Breloom
 Brionne
 Bronzong
 Bronzor
+Brute Bonnet
 Bruxish
 Budew
 Buizel
@@ -93,6 +101,7 @@ Cacnea
 Cacturne
 Calyrex
 Camerupt
+Capsakid
 Carbink
 Carkol
 Carnivine
@@ -106,8 +115,10 @@ Celesteela
 Centiskorch
 Ceruledge
 Cetitan
+Cetoddle
 Chandelure
 Chansey
+Charcadet
 Charizard
 Charjabug
 Charmander
@@ -118,6 +129,8 @@ Cherubi
 Chesnaught
 Chespin
 Chewtle
+Chi-Yu
+Chien-Pao
 Chikorita
 Chimchar
 Chimecho
@@ -133,6 +146,7 @@ Clefable
 Clefairy
 Cleffa
 Clobbopus
+Clodsire
 Cloyster
 Coalossal
 Cobalion
@@ -158,6 +172,7 @@ Crawdaunt
 Cresselia
 Croagunk
 Crobat
+Crocalor
 Croconaw
 Crustle
 Cryogonal
@@ -168,6 +183,7 @@ Cursola
 Cutiefly
 Cyclizar
 Cyndaquil
+Dachsbun
 Darkrai
 Darmanitan
 Dartrix
@@ -191,6 +207,8 @@ Diglett
 Ditto
 Dodrio
 Doduo
+Dolliv
+Dondozo
 Donphan
 Dottler
 Doublade
@@ -214,6 +232,7 @@ Drowzee
 Druddigon
 Dubwool
 Ducklett
+Dudunsparce
 Dugtrio
 Dunsparce
 Duosion
@@ -242,6 +261,7 @@ Empoleon
 Enamorus
 Entei
 Escavalier
+Espathra
 Espeon
 Espurr
 Eternatus
@@ -259,21 +279,27 @@ Feraligatr
 Ferroseed
 Ferrothorn
 Fidough
+Finizen
 Finneon
 Flaaffy
 Flabébé
+Flamigo
 Flapple
 Flareon
 Fletchinder
 Fletchling
+Flittle
 Floatzel
 Floette
+Floragato
 Florges
+Flutter Mane
 Flygon
 Fomantis
 Foongus
 Forretress
 Fraxure
+Frigibax
 Frillish
 Froakie
 Frogadier
@@ -288,11 +314,13 @@ Galvantula
 Garbodor
 Garchomp
 Gardevoir
+Garganacl
 Gastly
 Gastrodon
 Genesect
 Gengar
 Geodude
+Gholdengo
 Gible
 Gigalith
 Gimmighoul
@@ -303,6 +331,8 @@ Glalie
 Glameow
 Glastrier
 Gligar
+Glimmet
+Glimmora
 Gliscor
 Gloom
 Gogoat
@@ -325,6 +355,7 @@ Grafaiai
 Granbull
 Grapploct
 Graveler
+Great Tusk
 Greavard
 Greedent
 Greninja
@@ -371,6 +402,7 @@ Hoppip
 Horsea
 Houndoom
 Houndour
+Houndstone
 Huntail
 Hydreigon
 Hypno
@@ -382,6 +414,13 @@ Indeedee
 Infernape
 Inkay
 Inteleon
+Iron Bundle
+Iron Hands
+Iron Jugulis
+Iron Moth
+Iron Thorns
+Iron Treads
+Iron Valiant
 Ivysaur
 Jangmo-o
 Jellicent
@@ -400,6 +439,8 @@ Karrablast
 Kartana
 Kecleon
 Keldeo
+Kilowattrel
+Kingambit
 Kingdra
 Kingler
 Kirlia
@@ -445,6 +486,7 @@ Linoone
 Litleo
 Litten
 Litwick
+Lokix
 Lombre
 Lopunny
 Lotad
@@ -460,6 +502,7 @@ Luvdisc
 Luxio
 Luxray
 Lycanroc
+Mabosstiff
 Machamp
 Machoke
 Machop
@@ -488,7 +531,9 @@ Marill
 Marowak
 Marshadow
 Marshtomp
+Maschiff
 Masquerain
+Maushold
 Mawile
 Medicham
 Meditite
@@ -496,6 +541,7 @@ Meganium
 Melmetal
 Meloetta
 Meltan
+Meowscarada
 Meowstic
 Meowth
 Mesprit
@@ -534,6 +580,8 @@ Munchlax
 Munna
 Murkrow
 Musharna
+Nacli
+Naclstack
 Naganadel
 Natu
 Necrozma
@@ -554,18 +602,22 @@ Noivern
 Nosepass
 Numel
 Nuzleaf
+Nymble
 Obstagoon
 Octillery
 Oddish
+Oinkologne
 Omanyte
 Omastar
 Onix
 Oranguru
 Orbeetle
 Oricorio
+Orthworm
 Oshawott
 Overqwil
 Pachirisu
+Palafin
 Palkia
 Palossand
 Palpitoad
@@ -579,6 +631,8 @@ Parasect
 Passimian
 Patrat
 Pawmi
+Pawmo
+Pawmot
 Pawniard
 Pelipper
 Perrserker
@@ -626,11 +680,14 @@ Purugly
 Pyroar
 Pyukumuku
 Quagsire
+Quaquaval
 Quaxly
+Quaxwell
 Quilava
 Quilladin
 Qwilfish
 Raboot
+Rabsca
 Raichu
 Raikou
 Ralts
@@ -646,15 +703,18 @@ Regigigas
 Regirock
 Registeel
 Relicanth
+Rellor
 Remoraid
 Reshiram
 Reuniclus
+Revavroom
 Rhydon
 Rhyhorn
 Rhyperior
 Ribombee
 Rillaboom
 Riolu
+Roaring Moon
 Rockruff
 Roggenrola
 Rolycoly
@@ -674,6 +734,7 @@ Sandaconda
 Sandile
 Sandshrew
 Sandslash
+Sandy Shocks
 Sandygast
 Sawk
 Sawsbuck
@@ -682,8 +743,10 @@ Sceptile
 Scizor
 Scolipede
 Scorbunny
+Scovillain
 Scrafty
 Scraggy
+Scream Tail
 Scyther
 Seadra
 Seaking
@@ -707,6 +770,7 @@ Shieldon
 Shiftry
 Shiinotic
 Shinx
+Shroodle
 Shroomish
 Shuckle
 Shuppet
@@ -721,6 +785,7 @@ Sinistea
 Sirfetch'd
 Sizzlipede
 Skarmory
+Skeledirge
 Skiddo
 Skiploom
 Skitty
@@ -731,6 +796,7 @@ Skwovet
 Slaking
 Slakoth
 Sliggoo
+Slither Wing
 Slowbro
 Slowking
 Slowpoke
@@ -755,12 +821,14 @@ Spearow
 Spectrier
 Spewpa
 Spheal
+Spidops
 Spinarak
 Spinda
 Spiritomb
 Spoink
 Sprigatito
 Spritzee
+Squawkabilly
 Squirtle
 Stakataka
 Stantler
@@ -791,14 +859,18 @@ Swinub
 Swirlix
 Swoobat
 Sylveon
+Tadbulb
 Taillow
 Talonflame
+Tandemaus
 Tangela
 Tangrowth
 Tapu Bulu
 Tapu Fini
 Tapu Koko
 Tapu Lele
+Tarountula
+Tatsugiri
 Tauros
 Teddiursa
 Tentacool
@@ -810,7 +882,13 @@ Throh
 Thundurus
 Thwackey
 Timburr
+Ting-Lu
+Tinkatink
+Tinkaton
+Tinkatuff
 Tirtouga
+Toedscool
+Toedscruel
 Togedemaru
 Togekiss
 Togepi
@@ -855,6 +933,8 @@ Vanillish
 Vanillite
 Vanilluxe
 Vaporeon
+Varoom
+Veluza
 Venipede
 Venomoth
 Venonat
@@ -879,6 +959,7 @@ Wailord
 Walrein
 Wartortle
 Watchog
+Wattrel
 Weavile
 Weedle
 Weepinbell
@@ -892,11 +973,13 @@ Wiglett
 Wimpod
 Wingull
 Wishiwashi
+Wo-Chien
 Wobbuffet
 Woobat
 Wooloo
 Wooper
 Wormadam
+Wugtrio
 Wurmple
 Wynaut
 Wyrdeer
