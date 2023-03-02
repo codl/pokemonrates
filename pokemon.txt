@@ -278,6 +278,7 @@ Fennekin
 Feraligatr
 Ferroseed
 Ferrothorn
+Fezandipiti
 Fidough
 Finizen
 Finneon
@@ -417,6 +418,7 @@ Inteleon
 Iron Bundle
 Iron Hands
 Iron Jugulis
+Iron Leaves
 Iron Moth
 Iron Thorns
 Iron Treads
@@ -577,6 +579,7 @@ Mudkip
 Mudsdale
 Muk
 Munchlax
+Munkidori
 Munna
 Murkrow
 Musharna
@@ -606,7 +609,9 @@ Nymble
 Obstagoon
 Octillery
 Oddish
+Ogerpon
 Oinkologne
+Okidogi
 Omanyte
 Omastar
 Onix
@@ -876,6 +881,7 @@ Teddiursa
 Tentacool
 Tentacruel
 Tepig
+Terapagos
 Terrakion
 Thievul
 Throh
@@ -956,6 +962,7 @@ Vullaby
 Vulpix
 Wailmer
 Wailord
+Walking Wake
 Walrein
 Wartortle
 Watchog
