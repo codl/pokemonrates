@@ -9,7 +9,7 @@ on:
     - cron: "20 4 * * 1,4"
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
