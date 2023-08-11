@@ -23,6 +23,7 @@ Arbok
 Arboliva
 Arcanine
 Arceus
+Archaludon
 Archen
 Archeops
 Arctibax
@@ -204,6 +205,7 @@ Dialga
 Diancie
 Diggersby
 Diglett
+Dipplin
 Ditto
 Dodrio
 Doduo
@@ -416,6 +418,7 @@ Infernape
 Inkay
 Inteleon
 Iron Bundle
+Iron Crown
 Iron Hands
 Iron Jugulis
 Iron Leaves
@@ -693,6 +696,7 @@ Quilladin
 Qwilfish
 Raboot
 Rabsca
+Raging Bolt
 Raichu
 Raikou
 Ralts
