@@ -8,7 +8,7 @@ RUN --mount=type=cache,target=/root/.cache/pip/http pip install -r ci-requiremen
 WORKDIR /app
 
 COPY requirements.txt ./
-RUN --mount=type=cache,target=/root/.cache/pip/http pip-sync
+RUN --mount=type=cache,target=/root/.cache/pip/http pip install -r requirements.txt
 
 FROM common as scrape
 
@@ -20,7 +20,7 @@ FROM common as test
 
 COPY dev-requirements.txt ./
 RUN --mount=type=cache,target=/root/.cache/pip/http \
-    pip-sync dev-requirements.txt requirements.txt
+    pip install -r dev-requirements.txt -r requirements.txt
 
 COPY test_scrape_pokemon.py scrape_pokemon.py ./
 COPY test_data ./test_data
