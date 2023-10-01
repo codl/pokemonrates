@@ -669,6 +669,7 @@ Politoed
 Poliwag
 Poliwhirl
 Poliwrath
+Poltchageist
 Polteageist
 Ponyta
 Poochyena
@@ -790,6 +791,7 @@ Silvally
 Simipour
 Simisage
 Simisear
+Sinistcha
 Sinistea
 Sirfetch'd
 Sizzlipede
