@@ -29,13 +29,13 @@ jobs:
         git config user.email "codl@codl.fr"
         git config user.name "codl"
         git commit -m "Update list of pokémon" --author="Actions <actions@github.com>" pokemon.txt
-        git push --force origin master:update-scrape
+        git push --force origin main:update-scrape
     - name: pull-request-action
       if: ${{ env.changed == 1 }}
       uses: vsoch/pull-request-action@1.0.24
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PULL_REQUEST_BRANCH: "master"
+        PULL_REQUEST_BRANCH: "main"
         PULL_REQUEST_FROM_BRANCH: "update-scrape"
         PULL_REQUEST_ASSIGNEES: "codl"
         PULL_REQUEST_TITLE: "Update list of pokémon"
