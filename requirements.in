@@ -1,3 +1,4 @@
+-c constraints.txt
 mastodon.py
 requests
 ruamel.yaml
