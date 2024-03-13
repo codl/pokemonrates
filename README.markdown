@@ -8,7 +8,7 @@ these instructions are probably not for you
 
 ### natively
 
-make sure python 3.6ish or higher is installed, and that you're in [a venv](https://docs.python.org/3.10/library/venv.html)
+make sure python 3.12ish or higher is installed, and that you're in [a venv](https://docs.python.org/3.10/library/venv.html)
 
 ```
 # install dependencies
