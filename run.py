@@ -14,10 +14,10 @@ from bs4 import BeautifulSoup
 
 def pokémon_from_status_content(content: str, all_pokémon: Iterable[str]) -> set[str]:
     soup = BeautifulSoup(content, "html.parser")
-    clean = "".join(soup.strings).lower()
+    clean = "".join(soup.strings)
     pokémon_found = set()
     for pokémon in all_pokémon:
-        if pokémon.lower() in clean:
+        if re.search(r"\b" + pokémon + r"\b", clean, re.IGNORECASE):
             pokémon_found.add(pokémon.lower())
     return pokémon_found
 
