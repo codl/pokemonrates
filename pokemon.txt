@@ -353,6 +353,7 @@ Gossifleur
 Gothita
 Gothitelle
 Gothorita
+Gouging Fire
 Gourgeist
 Grafaiai
 Granbull
@@ -407,6 +408,7 @@ Houndoom
 Houndour
 Houndstone
 Huntail
+Hydrapple
 Hydreigon
 Hypno
 Igglybuff
@@ -417,6 +419,7 @@ Indeedee
 Infernape
 Inkay
 Inteleon
+Iron Boulder
 Iron Bundle
 Iron Crown
 Iron Hands
@@ -642,6 +645,7 @@ Pawmi
 Pawmo
 Pawmot
 Pawniard
+Pecharunt
 Pelipper
 Perrserker
 Persian
