@@ -8,6 +8,18 @@ import time
 from functools import reduce
 import logging
 import requests
+from typing import Iterable
+from bs4 import BeautifulSoup
+
+
+def pokémon_from_status_content(content: str, all_pokémon: Iterable[str]) -> set[str]:
+    soup = BeautifulSoup(content, "html.parser")
+    clean = "".join(soup.strings)
+    pokémon_found = set()
+    for pokémon in all_pokémon:
+        if re.search(r"\b" + pokémon + r"\b", clean, re.IGNORECASE):
+            pokémon_found.add(pokémon.lower())
+    return pokémon_found
 
 
 class Bot(mastodon.StreamListener):
@@ -50,35 +62,27 @@ class Bot(mastodon.StreamListener):
         self.mastodon.status_post(
                 self.tracery.flatten('#origin#'), visibility='public' if is_public else 'unlisted')
 
-    def to_pokémon(self, word):
-        for pokémon in self.pokémon:
-            if pokémon.lower() == word.lower():
-                return pokémon
-        return False
-
     def on_mention(self, status):
-        words = re.findall('\w+', status['content_clean'])
-        random.shuffle(words)
-        for word in words:
-            pokémon = self.to_pokémon(word)
-            if pokémon:
-                self.logger.info('Found pokémon: {}'.format(pokémon))
-                reply = self.tracery.flatten(
-                        '#[pokemon:{}]origin#'.format(pokémon))
-                self.tracery.clear_state()
-                return reply
-        ctx = self.mastodon.status_context(status)
-        if not any(map(lambda status: status['account']['id'] == self.me['id'], ctx['ancestors'])):
-            # if we're not already in the thread
-            return self.tracery.flatten('#origin#')
+        pokémon_set = pokémon_from_status_content(status["content"], self.pokémon)
+        if pokémon_set:
+            pokémon = random.choice(list(pokémon_set))
+            self.logger.info('Found pokémon: {}'.format(pokémon))
+            reply = self.tracery.flatten(
+                    '#[pokemon:{}]origin#'.format(pokémon))
+            self.tracery.clear_state()
+            return reply
         else:
-            self.logger.info("We're already in this thread, not replying.")
+            ctx = self.mastodon.status_context(status)
+            if not any(map(lambda status: status['account']['id'] == self.me['id'], ctx['ancestors'])):
+                # if we're not already in the thread
+                return self.tracery.flatten('#origin#')
+            else:
+                self.logger.info("We're already in this thread, not replying.")
 
     def on_notification(self, notification):
         if notification['type'] == 'mention':
             status = notification['status']
             clean = re.sub('<[^<>]+>', ' ', status.content, flags=re.I)
-            status['content_clean'] = clean
 
             self.logger.info('Reacting to mention: {}'.format(clean))
 
