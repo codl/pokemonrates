@@ -9,17 +9,16 @@ from functools import reduce
 import logging
 import requests
 from typing import Iterable
+from bs4 import BeautifulSoup
 
 
 def pokémon_from_status_content(content: str, all_pokémon: Iterable[str]) -> set[str]:
-    clean = re.sub('<[^<>]+>', ' ', content, flags=re.I)
-    words = re.findall(r'\w+', clean)
+    soup = BeautifulSoup(content, "html.parser")
+    clean = "".join(soup.strings).lower()
     pokémon_found = set()
-    for word in words:
-        for pokémon in all_pokémon:
-            if pokémon.lower() == word.lower():
-                pokémon_found.add(pokémon.lower())
-                break
+    for pokémon in all_pokémon:
+        if pokémon.lower() in clean:
+            pokémon_found.add(pokémon.lower())
     return pokémon_found
 
 
