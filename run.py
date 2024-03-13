@@ -18,7 +18,7 @@ def pokémon_from_status_content(content: str, all_pokémon: Iterable[str]) -> s
     pokémon_found = set()
     for pokémon in all_pokémon:
         if re.search(r"\b" + pokémon + r"\b", clean, re.IGNORECASE):
-            pokémon_found.add(pokémon.lower())
+            pokémon_found.add(pokémon)
     return pokémon_found
 
 

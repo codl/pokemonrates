@@ -2,44 +2,44 @@ import pytest
 from run import pokémon_from_status_content
 
 
-all_pokémon = ("pikachu", "snorlax", "slither wing", "abra")
+all_pokémon = ("Pikachu", "Snorlax", "Slither Wing", "Abra")
 
 
 pokémon_from_status_content_test_cases = (
     ("", set()),
     ("patamon", set()),
-    ("pikachu", {"pikachu"}),
+    ("pikachu", {"Pikachu"}),
     (
         "<p><b>pikachu</b></p>",
         {
-            "pikachu",
+            "Pikachu",
         },
     ),
     (
         "<p><b>pika</b>chu</p>",
         {
-            "pikachu",
+            "Pikachu",
         },
     ),
-    ("pikachu snorlax", {"pikachu", "snorlax"}),
+    ("pikachu snorlax", {"Pikachu", "Snorlax"}),
     ("<a href=pikachu></a>", set()),
     (
         "PiKaChU",
         {
-            "pikachu",
+            "Pikachu",
         },
     ),
     (
         "slither wing",
         {
-            "slither wing",
+            "Slither Wing",
         },
     ),
     (
         "pikachu slither wing",
         {
-            "pikachu",
-            "slither wing",
+            "Pikachu",
+            "Slither Wing",
         },
     ),
     ("my dog is a labrador", set()),
