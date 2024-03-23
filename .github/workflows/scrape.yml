@@ -3,9 +3,6 @@ name: Scrape pokémon list
 on:
   schedule:
     - cron: "20 4 * * 1,4"
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
