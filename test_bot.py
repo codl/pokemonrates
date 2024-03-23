@@ -49,3 +49,7 @@ pokémon_from_status_content_test_cases = (
 @pytest.mark.parametrize("test_input,expected", pokémon_from_status_content_test_cases)
 def test_pokémon_from_status_content(test_input, expected):
     assert pokémon_from_status_content(test_input, all_pokémon) == expected
+
+@pytest.mark.xfail
+def test_pokémon_from_status_content_regex():
+    assert pokémon_from_status_content("MRA Mime", ("Mr. Mime",)) == set()
