@@ -29,7 +29,7 @@ jobs:
         git push --force origin main:update-scrape
     - name: pull-request-action
       if: ${{ env.changed == 1 }}
-      uses: vsoch/pull-request-action@1.1.0
+      uses: vsoch/pull-request-action@1.1.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PULL_REQUEST_BRANCH: "main"
