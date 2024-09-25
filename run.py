@@ -137,5 +137,5 @@ if __name__ == '__main__':
             # why doesn't this ever run?
             logger.info('Quitting...')
             stopping = True
-        except Exception as e:
+        except Exception:
             bot.logger.exception('Crashed. Restarting...')
