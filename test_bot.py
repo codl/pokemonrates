@@ -50,5 +50,6 @@ pokémon_from_status_content_test_cases = (
 def test_pokémon_from_status_content(test_input, expected):
     assert pokémon_from_status_content(test_input, all_pokémon) == expected
 
+
 def test_pokémon_from_status_content_regex():
     assert pokémon_from_status_content("MRA Mime", ("Mr. Mime",)) == set()
