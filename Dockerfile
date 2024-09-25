@@ -1,4 +1,4 @@
-ARG python_version=3.12.2
+ARG python_version=3.12.6
 FROM python:$python_version as common
 
 COPY ci-requirements.txt ./
