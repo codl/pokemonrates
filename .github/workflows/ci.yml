@@ -15,6 +15,7 @@ jobs:
       with:
         enable-cache: true
         cache-suffix: lint
+        cache-dependency-glob: ""
     - run: uv tool install ruff
     - run: ruff check
     - run: ruff format --check
