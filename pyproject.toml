@@ -8,6 +8,7 @@ dependencies = [
 	"tracery",
 	"beautifulsoup4",
 ]
+requires-python=">=3.12"
 
 [project.optional-dependencies]
 test = [
