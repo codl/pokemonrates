@@ -1,35 +1,56 @@
+# syntax=docker/dockerfile:1.9
 ARG python_version=3.12.6
-FROM python:$python_version as common
 
-COPY ci-requirements.txt ./
+FROM python:$python_version as build
 
-RUN --mount=type=cache,target=/root/.cache/pip/http pip install -r ci-requirements.txt
+ENV UV_LINK_MODE=copy
+ENV UV_PROJECT_ENVIRONMENT=/app
 
-WORKDIR /app
+COPY --from=ghcr.io/astral-sh/uv:0.4.16 /uv /bin/uv
 
-COPY requirements.txt ./
-RUN --mount=type=cache,target=/root/.cache/pip/http pip install -r requirements.txt
+COPY pyproject.toml /_lock/
+COPY uv.lock /_lock/
 
-FROM common as scrape
+RUN --mount=type=cache,target=/root/.cache <<EOT
+cd /_lock
+uv sync \
+    --frozen \
+    --no-dev \
+    --no-install-project
+EOT
 
-COPY scrape_pokemon.py ./
+FROM build as test
 
-CMD ["python", "scrape_pokemon.py"]
+RUN --mount=type=cache,target=/root/.cache <<EOT
+cd /_lock
+uv sync \
+    --frozen \
+    --no-dev \
+    --no-install-project \
+    --extra=test
+EOT
 
-FROM common as test
+WORKDIR /test
 
-COPY dev-requirements.txt ./
-RUN --mount=type=cache,target=/root/.cache/pip/http \
-    pip install -r dev-requirements.txt -r requirements.txt
 
 COPY test_scrape_pokemon.py scrape_pokemon.py ./
 COPY test_data ./test_data
 
-CMD ["python", "-m", "pytest"]
+CMD ["/app/bin/python", "-m", "pytest"]
 
-FROM common as run
+FROM python:$python_version as scrape
+
+COPY --from=build /app /app
+
+COPY scrape_pokemon.py ./
+
+CMD ["/app/bin/python", "scrape_pokemon.py"]
+
+FROM python:$python_version as run
+
+COPY --from=build /app /app
 
 COPY grammar.yml run.py pokemon.txt ./
 
-CMD ["python", "run.py"]
+CMD ["/app/bin/python", "run.py"]
 

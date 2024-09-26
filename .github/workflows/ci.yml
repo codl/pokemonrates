@@ -31,15 +31,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
+    - uses: astral-sh/setup-uv@v3
       with:
-        python-version: ${{ matrix.python-version }}
-        cache: 'pip'
-        cache-dependency-path:
-          '*requirements.txt'
-    - run: pip install -r ci-requirements.txt
-    - run: pip install -r dev-requirements.txt -r requirements.txt
-    - run: python -m coverage run --parallel -m pytest
+        enable-cache: true
+        cache-suffix: ${{ matrix.python-version }}
+    - run: uv venv --python=${{ matrix.python-version }}
+    - run: uv sync --extra=test
+    - run: uv run python -m coverage run --parallel -m pytest
     - name: Upload coverage data
       uses: actions/upload-artifact@v4
       with:

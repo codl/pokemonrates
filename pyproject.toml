@@ -1,0 +1,16 @@
+[project]
+version="0.1"
+name="pokemonrates"
+dependencies = [
+	"mastodon.py",
+	"requests",
+	"ruamel.yaml",
+	"tracery",
+	"beautifulsoup4",
+]
+
+[project.optional-dependencies]
+test = [
+	"pytest",
+	"coverage[toml]",
+]

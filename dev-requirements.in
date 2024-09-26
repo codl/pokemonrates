@@ -1,4 +1,0 @@
--c constraints.txt
--c requirements.txt
-pytest
-coverage[toml]
