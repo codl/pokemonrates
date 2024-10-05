@@ -1,12 +1,12 @@
 # syntax=docker/dockerfile:1.9
 ARG python_version=3.12.6
 
-FROM python:$python_version as build
+FROM python:$python_version AS build
 
 ENV UV_LINK_MODE=copy
 ENV UV_PROJECT_ENVIRONMENT=/app
 
-COPY --from=ghcr.io/astral-sh/uv:0.4.16 /uv /bin/uv
+COPY --from=ghcr.io/astral-sh/uv:0.4.18 /uv /bin/uv
 
 COPY pyproject.toml /_lock/
 COPY uv.lock /_lock/
@@ -19,7 +19,7 @@ uv sync \
     --no-install-project
 EOT
 
-FROM build as test
+FROM build AS test
 
 RUN --mount=type=cache,target=/root/.cache <<EOT
 cd /_lock
@@ -38,7 +38,7 @@ COPY test_data ./test_data
 
 CMD ["/app/bin/python", "-m", "pytest"]
 
-FROM python:$python_version as scrape
+FROM python:$python_version AS scrape
 
 COPY --from=build /app /app
 
@@ -46,7 +46,7 @@ COPY scrape_pokemon.py ./
 
 CMD ["/app/bin/python", "scrape_pokemon.py"]
 
-FROM python:$python_version as run
+FROM python:$python_version AS run
 
 COPY --from=build /app /app
 
