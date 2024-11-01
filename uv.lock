@@ -177,7 +177,7 @@ dependencies = [
     { name = "tracery" },
 ]
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 test = [
     { name = "coverage" },
     { name = "pytest" },
@@ -186,12 +186,16 @@ test = [
 [package.metadata]
 requires-dist = [
     { name = "beautifulsoup4" },
-    { name = "coverage", extras = ["toml"], marker = "extra == 'test'" },
     { name = "mastodon-py" },
-    { name = "pytest", marker = "extra == 'test'" },
     { name = "requests" },
     { name = "ruamel-yaml" },
     { name = "tracery" },
+]
+
+[package.metadata.requires-dev]
+test = [
+    { name = "coverage", extras = ["toml"] },
+    { name = "pytest" },
 ]
 
 [[package]]
