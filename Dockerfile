@@ -36,6 +36,7 @@ WORKDIR /test
 COPY test_scrape_pokemon.py scrape_pokemon.py ./
 COPY test_data ./test_data
 
+ENV PYTHONUNBUFFERED=1
 CMD ["/app/bin/python", "-m", "pytest"]
 
 FROM python:$python_version AS scrape
@@ -52,5 +53,5 @@ COPY --from=build /app /app
 
 COPY grammar.yml run.py pokemon.txt ./
 
+ENV PYTHONUNBUFFERED=1
 CMD ["/app/bin/python", "run.py"]
-
