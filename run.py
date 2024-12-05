@@ -54,6 +54,7 @@ class Bot(mastodon.StreamListener):
             access_token=self.config["access_token"],
             session=s,
         )
+        self.mastodon.version_check_mode = "none"
 
     def save(self):
         yaml = ruamel.yaml.YAML()
