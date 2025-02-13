@@ -1,8 +1,8 @@
 name: Scrape pokémon list
 
 on:
-  schedule:
-    - cron: "20 4 * * 1,4"
+  # schedule:
+  #   - cron: "20 4 * * 1,4"
   workflow_dispatch:
 
 jobs:
