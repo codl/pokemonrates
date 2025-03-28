@@ -49,9 +49,12 @@ CMD ["/app/bin/python", "scrape_pokemon.py"]
 
 FROM python:$python_version AS run
 
+RUN apt-get update && apt-get install tini && rm -rf /var/lib/apt/lists/*
+
 COPY --from=build /app /app
 
 COPY grammar.yml run.py pokemon.txt ./
 
 ENV PYTHONUNBUFFERED=1
+ENTRYPOINT ["/usr/bin/tini", "-v", "--"]
 CMD ["/app/bin/python", "run.py"]
