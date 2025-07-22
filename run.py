@@ -45,7 +45,7 @@ class Bot(mastodon.StreamListener):
 
         s = requests.Session()
         s.headers.update(
-            {"user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"}
+            {"user-agent": "Pokemon Rates +https://codeberg.org/codl/pokemonrates"}
         )
         self.mastodon = mastodon.Mastodon(
             api_base_url=self.config["instance"],

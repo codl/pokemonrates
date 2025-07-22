@@ -21,7 +21,7 @@ def fetch(attempts: int = 6, verbose: bool = True) -> requests.Response:
             resp = requests.get(
                 URL,
                 headers={
-                    "user-agent": "Pokemon Rates +https://botsin.space/@pokemonrates"
+                    "user-agent": "Pokemon Rates +https://codeberg.org/codl/pokemonrates"
                 },
             )
             resp.raise_for_status()
